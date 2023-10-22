@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.registerPatient"
+    android:background="@drawable/signup_screen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAddPatient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/bigshot_one"
+                android:text="@string/tvAddPatient"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#3F51B5"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fnamelay"
+                style="@style/LoginTextInputOuterFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullname"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/enterfname"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/agelay"
+                style="@style/LoginTextInputOuterFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/age"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/ageET"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobilely"
+                style="@style/LoginTextInputOuterFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobile"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/entermobile"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityem"
+                style="@style/LoginTextInputOuterFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ucity"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/entercity"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/countryly"
+                style="@style/LoginTextInputOuterFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/country"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/entercountry"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailLayout"
+                style="@style/LoginTextInputOuterFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEt"
+                    style="@style/LoginTextInputInnerFieldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/type_your_email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Add Spinner for Medical Condition -->
+
+            <TextView
+                android:id="@+id/tvViewCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="10dp"
+                android:text="TextView"
+                tools:text="@string/tvCondition" />
+
+            <Spinner
+                android:id="@+id/conditionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:entries="@array/condition_options"
+                android:padding="16dp"
+                android:prompt="@string/spinner_prompt_condition" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddPatient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/blue"
+                android:text="Add patient"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Already Registered , Sign In !"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
